@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>简易计算器</title>
+	
+</head>
+<body>
+<center>
+<div><img src="xiaotu.jpg">购物简易计算机</br></div>
+<form action="" name="form">
+第一个数：<input type="text" id="shuzi1"></br></br>
+第二个数：<input type="text" id="shuzi2"></br></br>
+        <input type="button" name="ad" value="+" id="a" onclick="yunsuan('+')">
+		<input type="button" name="su" value="-" id="a" onclick="yunsuan('-')">
+		<input type="button" name="ch" value="*" id="a" onclick="yunsuan('*')">
+		<input type="button" name="cu" value="/" id="a" onclick="yunsuan('/')"></br></br>	
+
+计算结果：<input type="text" id="sum">
+
+</form>
+
+
+<script type="text/javascript"> 
+      
+
+	function yunsuan(dd)
+	{
+	   var a=parseInt(document.getElementById("shuzi1").value);  
+       var b=parseInt(document.getElementById("shuzi2").value);
+       var re;
+			switch(dd){  
+           case '+':re=a+b;  
+            break;  
+           case "-":re=a-b;  
+            break;  
+            case "*":re=a*b;  
+            break;
+            case "/":
+            if(b!=0)
+            re=a/b;
+            else
+            re="除数不能为0";  
+            break;   
+            default: 
+            re="请输入数字";
+                  
+       }  
+        document.getElementById("sum").value=re;
+	}
+	</script>
+</center>
+</body>
